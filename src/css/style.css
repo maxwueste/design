@@ -77,7 +77,6 @@ h1 a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 10px;
 }
 
 pre,
@@ -94,12 +93,26 @@ p {
   margin: 0;
 }
 
+p.adress {
+  line-height: 18px;
+}
+
+span.no_wrap {
+  white-space: nowrap;
+}
+
+a.link {
+  display: block;
+  text-decoration: none;
+  padding-top: 15px;
+}
+
 header {
   display: flex;
   margin: 0 auto;
   height: 100vh;
   max-width: 900px;
-  width: 100%;
+  width: 90%;
   padding: 0;
   border: 1px solid green;
   justify-content: center;
@@ -163,11 +176,11 @@ h3 {
   margin-left: 50px;
   color: var(--accent);
   font-size: 50px;
-  font-weight: 700;
-  letter-spacing: -3px;
+  font-weight: bold;
+  letter-spacing: 0;
   line-height: 1.2;
   position: relative;
-  bottom: 20%;
+  bottom: 40px;
   display: inline-block;
 }
 
@@ -186,7 +199,7 @@ footer {
   background: var(--black);
   height: 200px;
   max-width: 900px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   border: 1px solid blue;
 }
