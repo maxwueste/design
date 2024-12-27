@@ -1,34 +1,73 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <meta name="description" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="src/css/style.css">
-  <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
-
-</body>
-
+  <body>
+    <header>
+      <div class="logo">logo</div>
+      <h2>Viel Text</h2>
+    </header>
+    <main>
+      <article>
+        <section>
+          <ul>
+            <li>
+              <img src="src/img/image_01.webp" />
+              <h3>#001</h3>
+            </li>
+            <li>
+              <img src="src/img/image_01.webp" />
+              <h3>#002</h3>
+            </li>
+            <li>
+              <img src="src/img/image_01.webp" />
+              <h3>#003</h3>
+            </li>
+            <li>
+              <img src="src/img/image_01.webp" />
+              <h3>#004</h3>
+            </li>
+            <li>
+              <img src="src/img/image_01.webp" />
+              <h3>#005</h3>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <div class="progress"></div>
+    </main>
+    <footer>
+      <p>
+        Börries Hessler · Visueller Gestalter HF · +41 79 416 09 39 ·
+        hello@hessler.design
+      </p>
+    </footer>
+    <script>
+      document.body.style.setProperty(
+        "--accent",
+        `var(--hue-${Math.ceil(Math.random() * 7) - 1})`
+      );
+    </script>
+    <script src="src/js/script.js" type="module"></script>
+  </body>
 </html>
