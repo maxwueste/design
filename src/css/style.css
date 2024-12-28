@@ -179,9 +179,9 @@ p.description {
 
 h2 {
   font-size: 140px;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: -1px;
-  line-height: 130px;
+  line-height: 134px;
   text-align: center;
   margin: 0;
 }
