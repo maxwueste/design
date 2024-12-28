@@ -25,7 +25,7 @@ scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
 // Image title parallax
 const segmentLength = 1 / items.length;
 items.forEach((item, i) => {
-  const header = item.querySelector("h4");
+  const header = item.querySelectorAll("h4, .description");
 
   scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
     target: document.querySelector("section"),
