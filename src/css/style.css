@@ -198,7 +198,7 @@ h3 {
 
 h3 span {
   color: var(--accent);
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h4 {

@@ -96,8 +96,13 @@ class TextScramble {
   }
 }
 
-// phrases
-const phrases = ["Prägnanz", "Schönheit", "Einfachheit", "Charakter"];
+const phrases = [
+  "Prägnanz",
+  "Ästhetik",
+  "Originalität",
+  "Charakter",
+  "Funktion",
+];
 
 const el = document.querySelector(".glitchtext");
 const fx = new TextScramble(el);
