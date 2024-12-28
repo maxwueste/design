@@ -27,7 +27,7 @@ const segmentLength = 1 / items.length;
 items.forEach((item, i) => {
   const header = item.querySelector("h3");
 
-  scroll(animate(header, { x: [500, -100] }, { ease: "linear" }), {
+  scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
     target: document.querySelector("section"),
     offset: [
       [i * segmentLength, 1],
