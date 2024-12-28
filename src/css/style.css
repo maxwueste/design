@@ -19,12 +19,11 @@ body {
   --white: #f5f5f5;
   --yellow: #fff312;
   --hue-0: var(--yellow);
-  --hue-1: #ff0088;
-  --hue-2: #dd00ee;
-  --hue-3: #9911ff;
-  --hue-4: #0d63f8;
-  --hue-5: #0cdcf7;
-  --hue-6: #4ff0b7;
+  --hue-1: #dd00ee;
+  --hue-2: #af71de;
+  --hue-3: #0dbdf8;
+  --hue-4: #0cdcf7;
+  --hue-5: #4ff0b7;
 
   background: var(--black);
   color: var(--color);
