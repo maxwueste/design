@@ -16,6 +16,10 @@ scroll(
   ),
   { target: document.querySelector("section") }
 );
+// Progress bar representing site scroll
+scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
+  target: document.querySelector("wrapper"),
+});
 
 // Progress bar representing gallery scroll
 scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
