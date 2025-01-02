@@ -91,10 +91,15 @@ header {
   position: sticky;
   top: 50px;
   fill: var(--accent);
-  width: 300px;
+  max-width: 300px;
   height: auto;
   z-index: 2;
   place-self: center;
+}
+
+svg {
+  width: 100%;
+  height: auto;
 }
 
 .hidden {
