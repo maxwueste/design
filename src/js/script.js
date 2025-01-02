@@ -1,11 +1,12 @@
 import {
   animate,
   scroll,
+  inView,
 } from "https://cdn.jsdelivr.net/npm/framer-motion@11.11.11/dom/+esm";
 
 const items = document.querySelectorAll("li");
 
-// Animate gallery horizontally during vertical scroll
+// Animate portfolio gallery horizontally during vertical scroll
 scroll(
   animate(
     "ul",
@@ -14,16 +15,17 @@ scroll(
     },
     { ease: "linear" }
   ),
-  { target: document.querySelector("section") }
+  { target: document.querySelector("#portfolio") }
 );
-// Progress bar representing site scroll
+
+// Progress bar representing entire website scroll
 scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
 // Progress bar representing gallery scroll
 scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
-  target: document.querySelector("section"),
+  target: document.querySelector("#portfolio"),
 });
 
 // Image title parallax
@@ -32,12 +34,24 @@ items.forEach((item, i) => {
   const header = item.querySelectorAll("h4, .description");
 
   scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
-    target: document.querySelector("section"),
+    target: document.querySelector("#portfolio"),
     offset: [
       [i * segmentLength, 1],
       [(i + 1) * segmentLength, 0],
     ],
   });
+});
+
+// Text animation
+inView("footer", ({ target }) => {
+  animate(
+    target.querySelectorAll("div.name, div.adress, div.contact"),
+    { opacity: 1, x: [-200, 0] },
+    {
+      duration: 1.2,
+      easing: [0.17, 0.55, 0.55, 1],
+    }
+  );
 });
 
 // Text animation
@@ -103,9 +117,11 @@ class TextScramble {
 const phrases = [
   "Prägnanz",
   "Ästhetik",
-  "Originalität",
+  "Strategie",
   "Charakter",
+  "Methode",
   "Funktion",
+  "Zweck",
 ];
 
 const el = document.querySelector(".glitchtext");

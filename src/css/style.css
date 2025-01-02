@@ -62,12 +62,10 @@ h1 {
   margin: 0;
 }
 
-pre,
 h2,
 h3,
 h4,
 p {
-  color: var(--accent);
   font-family: "Nouvelle", sans-serif;
   padding: 0;
   margin: 0;
@@ -91,13 +89,35 @@ header {
 .logo {
   display: grid;
   position: sticky;
-  top: 30px;
+  top: 50px;
   fill: var(--accent);
   width: 300px;
-  height: 140px;
-  z-index: 1;
+  height: auto;
+  z-index: 2;
   place-self: center;
-  border: 1px solid red;
+}
+
+.hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(
+    1px 1px 1px 1px
+  ); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(
+    1px,
+    1px,
+    1px,
+    1px
+  ); /*maybe deprecated but we need to support legacy browsers */
+  clip-path: inset(
+    50%
+  ); /*modern browsers, clip-path works inwards from each corner*/
+  white-space: nowrap;
 }
 
 .intro_text {
@@ -117,7 +137,16 @@ header {
   place-self: start;
 }
 
-section {
+section#statement {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--accent);
+}
+
+section#portfolio {
   position: relative;
   margin: 0;
   padding: 0;
@@ -167,10 +196,11 @@ p.description {
 }
 
 h2 {
+  color: var(--accent);
   font-size: 140px;
   font-weight: bold;
   letter-spacing: -1px;
-  line-height: 134px;
+  line-height: 136px;
   text-align: center;
   margin: 0;
 }
@@ -205,10 +235,10 @@ h4 {
   left: 0;
   right: 0;
   height: 10px;
-  background: var(--accent);
+  background: white;
   transform: scaleY(0);
   transform-origin: left;
-  z-index: 2;
+  z-index: 3;
 }
 
 .progress {
@@ -235,6 +265,7 @@ footer {
 .name,
 .adress,
 .contact {
+  color: var(--accent);
   padding-top: 20px;
   align-content: start;
   text-align: center;
