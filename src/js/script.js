@@ -4,6 +4,11 @@ import {
   inView,
 } from "https://cdn.jsdelivr.net/npm/framer-motion@11.11.11/dom/+esm";
 
+// Progress bar representing entire website scroll
+scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
+  target: document.querySelector("wrapper"),
+});
+
 const items = document.querySelectorAll("li");
 
 // Animate portfolio gallery horizontally during vertical scroll
@@ -18,12 +23,7 @@ scroll(
   { target: document.querySelector("#portfolio") }
 );
 
-// Progress bar representing entire website scroll
-scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
-  target: document.querySelector("wrapper"),
-});
-
-// Progress bar representing gallery scroll
+// Progress bar representing portfolio gallery scroll
 scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("#portfolio"),
 });
