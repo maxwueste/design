@@ -142,16 +142,56 @@ svg {
   place-self: start;
 }
 
-section#statement {
+#statement {
   padding: 0;
   margin: 0;
   display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 30% 50%;
   width: 100%;
   height: 100vh;
   background-color: var(--accent);
 }
 
-section#portfolio {
+.box_1 {
+  display: grid;
+  height: 100vh;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  z-index: 0;
+}
+
+.box_2 {
+  display: grid;
+  height: 100vh;
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+.box_3 {
+  margin: 0 auto;
+  display: grid;
+  width: 90%;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.box_4 {
+  margin: 0 auto;
+  display: grid;
+  width: 90%;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#portfolio {
   position: relative;
   margin: 0;
   padding: 0;
@@ -186,6 +226,13 @@ li img {
   height: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
+}
+
+img.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 p.description {
@@ -254,6 +301,7 @@ h4 {
   background: var(--accent);
   bottom: 8px;
   transform: scaleX(0);
+  z-index: 3;
 }
 
 footer {

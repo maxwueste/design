@@ -9,49 +9,19 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
-const items = document.querySelectorAll("li");
+// Fade out header
+document.querySelectorAll("header").forEach((item) => {
+  scroll(animate(item, { opacity: [1, 1, 2, -0.2] }, { ease: "linear" }), {
+    target: item,
+    offset: ["start end", "end end", "start start", "end start"],
+  });
+});
 
-// Animate portfolio gallery horizontally during vertical scroll
-scroll(
-  animate(
-    "ul",
-    {
-      transform: ["none", `translateX(-${items.length - 1}00vw)`],
-    },
-    { ease: "linear" }
-  ),
-  { target: document.querySelector("#portfolio") }
-);
+const items = document.querySelectorAll("li");
 
 // Progress bar representing portfolio gallery scroll
 scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("#portfolio"),
-});
-
-// Image title parallax
-const segmentLength = 1 / items.length;
-items.forEach((item, i) => {
-  const header = item.querySelectorAll("h4, .description");
-
-  scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
-    target: document.querySelector("#portfolio"),
-    offset: [
-      [i * segmentLength, 1],
-      [(i + 1) * segmentLength, 0],
-    ],
-  });
-});
-
-// Text animation
-inView("footer", ({ target }) => {
-  animate(
-    target.querySelectorAll("div.name, div.adress, div.contact"),
-    { opacity: 1, x: [-200, 0] },
-    {
-      duration: 1.2,
-      easing: [0.17, 0.55, 0.55, 1],
-    }
-  );
 });
 
 // Text animation
@@ -136,3 +106,53 @@ const next = () => {
 };
 
 next();
+
+// Box animation section statement
+inView("section, footer", ({ target }) => {
+  animate(
+    target.querySelector(".box_1"),
+    { opacity: 1, x: [-1000, 0] },
+    {
+      duration: 2.6,
+      easing: [0.75, 0.5, 0.5, 0.15],
+    }
+  );
+});
+
+// Animate portfolio gallery horizontally during vertical scroll
+scroll(
+  animate(
+    "ul",
+    {
+      transform: ["none", `translateX(-${items.length - 1}00vw)`],
+    },
+    { ease: "linear" }
+  ),
+  { target: document.querySelector("#portfolio") }
+);
+
+// Image title parallax
+const segmentLength = 1 / items.length;
+items.forEach((item, i) => {
+  const header = item.querySelectorAll("h4, .description");
+
+  scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
+    target: document.querySelector("#portfolio"),
+    offset: [
+      [i * segmentLength, 1],
+      [(i + 1) * segmentLength, 0],
+    ],
+  });
+});
+
+// Text animation
+inView("footer", ({ target }) => {
+  animate(
+    target.querySelectorAll(".name, .adress, .contact"),
+    { opacity: 1, x: [-200, 0] },
+    {
+      duration: 1.6,
+      easing: [0.1, 0.2, 0.55, 0.75],
+    }
+  );
+});
