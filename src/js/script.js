@@ -108,13 +108,14 @@ const next = () => {
 next();
 
 // Box animation section statement
-inView("section, footer", ({ target }) => {
+inView("section", ({ target }) => {
   animate(
     target.querySelector(".box_1"),
     { opacity: 1, x: [-1000, 0] },
     {
-      duration: 2.6,
-      easing: [0.75, 0.5, 0.5, 0.15],
+      duration: 2,
+      easing: [2, 1.5, 0.5, 0.1],
+      delay: 2,
     }
   );
 });
