@@ -108,16 +108,11 @@ const next = () => {
 next();
 
 // Box animation section statement
-inView("section", ({ target }) => {
-  animate(
-    target.querySelector(".box_1"),
-    { opacity: 1, x: [-1000, 0] },
-    {
-      duration: 2,
-      easing: [2, 1.5, 0.5, 0.1],
-      delay: 2,
-    }
-  );
+document.querySelectorAll(".box_1").forEach((item) => {
+  scroll(animate(item, { opacity: 1, x: [-1000, 0] }, { ease: "linear" }), {
+    target: item,
+    offset: ["start end", "end end"],
+  });
 });
 
 // Animate portfolio gallery horizontally during vertical scroll
