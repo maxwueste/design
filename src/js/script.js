@@ -9,9 +9,9 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
-// Fade out header
-document.querySelectorAll("header").forEach((item) => {
-  scroll(animate(item, { opacity: [1, 1, 2, -0.2] }, { ease: "linear" }), {
+// Fade out header and section statement
+document.querySelectorAll("header, .box_1, .box_4").forEach((item) => {
+  scroll(animate(item, { opacity: [1, 2, 2, -0.25] }, { ease: "linear" }), {
     target: item,
     offset: ["start end", "end end", "start start", "end start"],
   });
@@ -107,9 +107,17 @@ const next = () => {
 
 next();
 
-// Box animation section statement
+// box_1 photo animation section statement
 document.querySelectorAll(".box_1").forEach((item) => {
   scroll(animate(item, { opacity: 1, x: [-1000, 0] }, { ease: "linear" }), {
+    target: item,
+    offset: ["start end", "end end"],
+  });
+});
+
+// box_4 text animation section statement
+document.querySelectorAll(".box_4").forEach((item) => {
+  scroll(animate(item, { opacity: 1, y: [800, 0] }, { ease: "ease-out" }), {
     target: item,
     offset: ["start end", "end end"],
   });
