@@ -1,5 +1,6 @@
 import {
   animate,
+  stagger,
   scroll,
   inView,
 } from "https://cdn.jsdelivr.net/npm/framer-motion@11.11.11/dom/+esm";
@@ -7,6 +8,19 @@ import {
 // Progress bar representing entire website scroll
 scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
+});
+
+// Intro TExt and additional Text animation
+inView("header", ({ target }) => {
+  animate(
+    target.querySelectorAll(".intro_text, .additional_text"),
+    { opacity: 1, y: [-50, 0] },
+    {
+      duration: 1.3,
+      easing: [0.1, 0.2, 0.55, 0.75],
+      delay: stagger(0.3),
+    }
+  );
 });
 
 // Fade out header and section statement
@@ -153,10 +167,11 @@ items.forEach((item, i) => {
 inView("footer", ({ target }) => {
   animate(
     target.querySelectorAll(".name, .adress, .contact"),
-    { opacity: 1, x: [-200, 0] },
+    { opacity: 1, y: [80, 0] },
     {
-      duration: 1.6,
+      duration: 1.5,
       easing: [0.1, 0.2, 0.55, 0.75],
+      delay: stagger(0.3),
     }
   );
 });
