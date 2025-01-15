@@ -10,7 +10,7 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
-// Intro TExt and additional Text animation
+// Intro Text and additional Text animation
 inView("header", ({ target }) => {
   animate(
     target.querySelectorAll(".intro_text, .additional_text"),
@@ -122,8 +122,8 @@ const next = () => {
 next();
 
 // box_1 photo animation section statement
-document.querySelectorAll(".box_1").forEach((item) => {
-  scroll(animate(item, { opacity: 1, x: [-1000, 0] }, { ease: "linear" }), {
+document.querySelectorAll("img.portrait").forEach((item) => {
+  scroll(animate(item, { scale: [2.2, 1] }, { ease: "linear" }), {
     target: item,
     offset: ["start end", "end end"],
   });
