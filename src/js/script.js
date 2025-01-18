@@ -14,18 +14,18 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
 inView("header", ({ target }) => {
   animate(
     target.querySelectorAll(".intro_text, .additional_text"),
-    { opacity: 1, y: [-50, 0] },
+    { opacity: [0, 1], y: [100, 0] },
     {
-      duration: 1.3,
+      duration: 2,
       easing: [0.1, 0.2, 0.55, 0.75],
-      delay: stagger(0.3),
+      delay: stagger(0.2),
     }
   );
 });
 
 // Fade out header and section statement
 document.querySelectorAll("header, .box_1, .box_4").forEach((item) => {
-  scroll(animate(item, { opacity: [1, 2, 2, -0.25] }, { ease: "linear" }), {
+  scroll(animate(item, { opacity: [1, 2, 2, -0.1] }, { ease: "linear" }), {
     target: item,
     offset: ["start end", "end end", "start start", "end start"],
   });
@@ -123,10 +123,22 @@ next();
 
 // box_1 photo animation section statement
 document.querySelectorAll("img.portrait").forEach((item) => {
-  scroll(animate(item, { scale: [2.2, 1] }, { ease: "linear" }), {
-    target: item,
-    offset: ["start end", "end end"],
-  });
+  scroll(
+    animate(
+      item,
+      {
+        opacity: [0, 0.7, 0.9, 1],
+        scale: [2.3, 1.1],
+        y: [100, 0],
+        x: [100, 0],
+      },
+      { ease: "linear" }
+    ),
+    {
+      target: item,
+      offset: ["start end", "end end"],
+    }
+  );
 });
 
 // box_4 text animation section statement
