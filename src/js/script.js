@@ -179,11 +179,11 @@ items.forEach((item, i) => {
 inView("footer", ({ target }) => {
   animate(
     target.querySelectorAll(".name, .adress, .contact"),
-    { opacity: 1, y: [80, 0] },
+    { opacity: [0, 1], y: [100, 0] },
     {
       duration: 1.5,
       easing: [0.1, 0.2, 0.55, 0.75],
-      delay: stagger(0.3),
+      delay: stagger(0.4),
     }
   );
 });
