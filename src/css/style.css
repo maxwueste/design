@@ -163,6 +163,13 @@ svg {
   z-index: 0;
 }
 
+img.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .box_2 {
   display: grid;
   height: 100vh;
@@ -199,7 +206,7 @@ svg {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: rgb(34, 210, 172);
+  background-color: black;
   height: 250vh;
 }
 
@@ -223,26 +230,32 @@ ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 20% 50%;
   overflow: hidden;
-}
-
-img.portrait {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
+  filter: grayscale(100%);
 }
 
 p.description {
-  margin-right: 30%;
   color: white;
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 26px;
   font-weight: normal;
-  letter-spacing: 0;
+  letter-spacing: 1px;
   position: relative;
-  left: 15%;
+  left: 65%;
+  right: 0;
   bottom: 25%;
+}
+
+p.description::after {
+  content: "";
+  background-color: var(--accent);
+  position: absolute;
+  width: 100%;
+  left: -10px;
+  right: 0;
+  top: -3px;
+  bottom: -6px;
+  z-index: -1;
 }
 
 h2 {
@@ -275,8 +288,8 @@ h4 {
   font-weight: bold;
   letter-spacing: 0;
   position: relative;
-  left: 20%;
-  bottom: 20%;
+  left: 70%;
+  bottom: 25%;
 }
 
 h5 {
@@ -404,9 +417,8 @@ a.link:after {
   }
 
   p.description {
-    margin-right: 40%;
-    left: 5%;
-    bottom: 20%;
+    left: 60%;
+    bottom: 25%;
   }
 
   footer {
@@ -436,9 +448,12 @@ a.link:after {
     line-height: 24px;
   }
 
+  h4 {
+    display: none;
+  }
+
   p.description {
-    margin-right: 40%;
-    left: 3%;
+    left: 30%;
     bottom: 15%;
   }
 

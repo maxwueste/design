@@ -166,7 +166,7 @@ const segmentLength = 1 / items.length;
 items.forEach((item, i) => {
   const header = item.querySelectorAll("h4, .description");
 
-  scroll(animate(header, { x: [300, -100] }, { ease: "linear" }), {
+  scroll(animate(header, { x: [100, -100] }, { ease: "linear" }), {
     target: document.querySelector("#portfolio"),
     offset: [
       [i * segmentLength, 1],
