@@ -23,9 +23,9 @@ inView("header", ({ target }) => {
   );
 });
 
-// Fade out header and section statement
-document.querySelectorAll("header, .box_1, .box_4").forEach((item) => {
-  scroll(animate(item, { opacity: [1, 2, 2, -0.1] }, { ease: "linear" }), {
+// Fade out header and portrait image
+document.querySelectorAll("header").forEach((item) => {
+  scroll(animate(item, { opacity: [1, 2, 1.2, -0.1] }, { ease: "linear" }), {
     target: item,
     offset: ["start end", "end end", "start start", "end start"],
   });
@@ -127,16 +127,14 @@ document.querySelectorAll("img.portrait").forEach((item) => {
     animate(
       item,
       {
-        opacity: [0, 0.7, 0.9, 1],
-        scale: [2.3, 1.1],
-        y: [100, 0],
-        x: [100, 0],
+        opacity: [0.6, 1, 1, -0.1],
+        scale: [2.3, 1.1, 1.1, 1.1],
       },
       { ease: "linear" }
     ),
     {
       target: item,
-      offset: ["start end", "end end"],
+      offset: ["start end", "end end", "start start", "end start"],
     }
   );
 });
