@@ -17,11 +17,11 @@
 body {
   --black: #000000;
   --white: #f5f5f5;
-  --yellow: #fec242;
+  --yellow: #ecb339;
   --hue-0: var(--yellow);
   --hue-1: #fd5644;
   --hue-2: #4cbb58;
-  --hue-3: #f4b231;
+  --hue-3: #e48216;
   --hue-4: #b777e1;
   --hue-5: #4c9ae0;
 
