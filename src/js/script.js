@@ -23,7 +23,7 @@ inView("header", ({ target }) => {
   );
 });
 
-// Fade out header and portrait image
+// Fade out header
 document.querySelectorAll("header").forEach((item) => {
   scroll(animate(item, { opacity: [1, 2, 1.2, -0.1] }, { ease: "linear" }), {
     target: item,
@@ -127,7 +127,7 @@ document.querySelectorAll("img.portrait").forEach((item) => {
     animate(
       item,
       {
-        opacity: [0.6, 1, 1, -0.1],
+        opacity: [0, 1, 1, -0.1],
         scale: [2.3, 1.1, 1.1, 1.1],
       },
       { ease: "linear" }
@@ -164,7 +164,7 @@ const segmentLength = 1 / items.length;
 items.forEach((item, i) => {
   const header = item.querySelectorAll("h4, .description");
 
-  scroll(animate(header, { x: [100, -100] }, { ease: "linear" }), {
+  scroll(animate(header, { x: [100, -150] }, { ease: "linear" }), {
     target: document.querySelector("#portfolio"),
     offset: [
       [i * segmentLength, 1],
@@ -185,3 +185,9 @@ inView("footer", ({ target }) => {
     }
   );
 });
+
+// random accent color
+document.body.style.setProperty(
+  "--accent",
+  `var(--hue-${Math.ceil(Math.random() * 6) - 1})`
+);
