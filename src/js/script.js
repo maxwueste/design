@@ -127,7 +127,7 @@ document.querySelectorAll("img.portrait").forEach((item) => {
     animate(
       item,
       {
-        opacity: [0, 1, 1, -0.1],
+        opacity: [0.6, 1, 1, 0],
         scale: [2.3, 1.1, 1.1, 1.1],
       },
       { ease: "linear" }
@@ -176,7 +176,7 @@ items.forEach((item, i) => {
 // Text animation
 inView("footer", ({ target }) => {
   animate(
-    target.querySelectorAll(".name, .adress, .contact"),
+    target.querySelectorAll(".name, .adress, .contact, .baseline"),
     { opacity: [0, 1], y: [100, 0] },
     {
       duration: 1.5,
@@ -191,3 +191,10 @@ document.body.style.setProperty(
   "--accent",
   `var(--hue-${Math.ceil(Math.random() * 6) - 1})`
 );
+
+// get current date in the basline
+const d = new Date().toLocaleDateString("de-DE", {
+  year: "numeric",
+  month: "long",
+});
+document.getElementById("date").innerHTML = d;
