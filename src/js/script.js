@@ -139,6 +139,14 @@ document.querySelectorAll("img.portrait").forEach((item) => {
   );
 });
 
+// box_2 text set random quotes
+const texts = [
+  "Ich achte auf das Detail.",
+  "Ich liebe die Vielfalt zeitgenössischer Schriften.",
+];
+const randomIndex = Math.floor(Math.random() * texts.length);
+document.getElementById("random_quotes").innerText = texts[randomIndex];
+
 // box_4 text animation section statement
 document.querySelectorAll(".box_4").forEach((item) => {
   scroll(animate(item, { opacity: 1, y: [800, 0] }, { ease: "ease-out" }), {

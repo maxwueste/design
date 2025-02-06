@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Nouvelle";
-  src: url("@/src/fonts/NouvelleBold.woff2") format("woff2");
+  src: url("src/fonts/NouvelleBold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -8,8 +8,16 @@
 
 @font-face {
   font-family: "Nouvelle";
-  src: url("@/src/fonts/NouvelleNormal.woff2") format("woff2");
+  src: url("src/fonts/NouvelleNormal.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nouvelle";
+  src: url("src/fonts/NouvelleThinDiagonal") format("woff2");
+  font-weight: thin;
   font-style: normal;
   font-display: swap;
 }
@@ -62,10 +70,6 @@ h1 {
   margin: 0;
 }
 
-h2,
-h3,
-h4,
-h5,
 p {
   font-family: "Nouvelle", sans-serif;
   padding: 0;
@@ -188,6 +192,7 @@ img.portrait {
   height: 100vh;
   grid-column: 2/3;
   grid-row: 1/4;
+  border: 1px solid red;
 }
 
 .box_3 {
@@ -272,9 +277,10 @@ p.description::after {
 }
 
 h2 {
+  font-family: "Nouvelle", sans-serif;
+  font-weight: thin;
   color: var(--accent);
   font-size: 140px;
-  font-weight: bold;
   letter-spacing: -1px;
   line-height: 136px;
   text-align: center;
@@ -282,6 +288,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Nouvelle", sans-serif;
   color: white;
   font-size: 40px;
   line-height: 42px;
@@ -366,14 +373,14 @@ footer {
 }
 
 .box_coding {
-  padding-right: 10px;
+  padding-right: 15px;
   grid-column: 1/2;
   grid-row: 1/2;
   text-align: end;
 }
 
 .box_date {
-  padding-left: 10px;
+  padding-left: 15px;
   grid-column: 2/3;
   grid-row: 1/2;
   text-align: start;
