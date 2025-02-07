@@ -10,7 +10,7 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
-// Intro Text and additional Text animation
+// Intro text and additional text animation
 inView("header", ({ target }) => {
   animate(
     target.querySelectorAll(".intro_text, .additional_text"),
@@ -38,7 +38,7 @@ scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("#portfolio"),
 });
 
-// Text animation
+// text animation
 class TextScramble {
   constructor(el) {
     this.el = el;
@@ -142,7 +142,7 @@ document.querySelectorAll("img.portrait").forEach((item) => {
 // box_2 text set random quotes
 const texts = [
   "Ich achte auf das Detail.",
-  "Ich liebe die Vielfalt zeitgenössischer Schriften.",
+  "Ich liebe die Vielfalt des zeitgenössischen Typedesign.",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
@@ -170,7 +170,7 @@ scroll(
 // Image title parallax
 const segmentLength = 1 / items.length;
 items.forEach((item, i) => {
-  const header = item.querySelectorAll("h4, .description");
+  const header = item.querySelectorAll(".description, .number");
 
   scroll(animate(header, { x: [100, -150] }, { ease: "linear" }), {
     target: document.querySelector("#portfolio"),

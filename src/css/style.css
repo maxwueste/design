@@ -1,25 +1,25 @@
 @font-face {
-  font-family: "Nouvelle";
-  src: url("src/fonts/NouvelleBold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nouvelle";
-  src: url("src/fonts/NouvelleNormal.woff2") format("woff2");
+  font-family: "NouvelleBold";
+  src: url("/src/fonts/NouvelleBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
-  font-family: "Nouvelle";
-  src: url("src/fonts/NouvelleThinDiagonal") format("woff2");
-  font-weight: thin;
+  font-family: "NouvelleNormal";
+  src: url("/src/fonts/NouvelleNormal.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "NouvelleThinDiagonal";
+  src: url("/src/fonts/NouvelleThinDiagonal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: optional;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   --white: #f5f5f5;
   --yellow: #ecb339;
   --hue-0: var(--yellow);
-  --hue-1: #fd5644;
+  --hue-1: #e12c18;
   --hue-2: #4cbb58;
   --hue-3: #e48216;
   --hue-4: #b777e1;
@@ -44,7 +44,9 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Nouvelle", sans-serif;
+  font-family: "NouvelleNormal", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 body::-webkit-scrollbar {
@@ -192,6 +194,8 @@ img.portrait {
   height: 100vh;
   grid-column: 2/3;
   grid-row: 1/4;
+  align-items: start;
+  justify-content: start;
   border: 1px solid red;
 }
 
@@ -254,6 +258,9 @@ ul li img {
 }
 
 p.description {
+  font-family: "NouvelleNormal", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: white;
   font-size: 26px;
   font-weight: normal;
@@ -269,7 +276,7 @@ p.description::after {
   background-color: var(--accent);
   position: absolute;
   width: 100%;
-  left: -10px;
+  left: -12px;
   right: 0;
   top: -3px;
   bottom: -6px;
@@ -277,8 +284,9 @@ p.description::after {
 }
 
 h2 {
-  font-family: "Nouvelle", sans-serif;
-  font-weight: thin;
+  font-family: "NouvelleBold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: var(--accent);
   font-size: 140px;
   letter-spacing: -1px;
@@ -288,7 +296,9 @@ h2 {
 }
 
 h3 {
-  font-family: "Nouvelle", sans-serif;
+  font-family: "NouvelleNormal", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: white;
   font-size: 40px;
   line-height: 42px;
@@ -302,10 +312,27 @@ h3 span {
   font-weight: normal;
 }
 
-h4 {
+#random_quotes {
+  width: 80%;
+  font-family: "NouvelleThinDiagonal", sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 200px;
+  padding: 0;
+  color: white;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+
+p.number {
+  font-family: "NouvelleBold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
   color: var(--accent);
   font-size: 85px;
-  font-weight: bold;
   letter-spacing: 0;
   position: relative;
   left: 70%;
