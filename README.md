@@ -7,7 +7,7 @@ Hier sind ein paar wichtige Punkte:
   - Die Ordner in dem sie genested sind bestimmen den Link/Path.
 - Für Assets, eignet sich der `src` Ordner. Dies ist jedoch nicht obligatorisch. Du kannst den Ablegeort frei wählen.
 - Sollte es wichtig sein dass ein Asset eins zu eins übernommen werden muss (also dass z. B. /favicon.ico auch /favicon.ico bleibt und nicht verarbeitet wird) musst du es in den `public` Order legen. (Es sei denn es ist eine `html` Datei)
-- So wie dein Projekt jetzt aussieht, ist es nicht geeignet so in dem Zustand gehosted zu werden. Du must dein Projekt mit `bun run build` bauen. Das gibt dir einen `dist` Ordner, welche eine packetierte, optimierte Version deiner Seite beinhalted. Solltest du `Vercel` verwende, so passiert dies automatisch sobald du deine Änderungen aug GitHub lädst.
+- So wie dein Projekt jetzt aussieht, ist es nicht geeignet so in dem Zustand gehosted zu werden. Du must dein Projekt mit `bun run build` bauen. Das gibt dir einen `dist` Ordner, welche eine packetierte, optimierte Version deiner Seite beinhalted. Solltest du `Vercel` verwenden, so passiert dies automatisch sobald du deine Änderungen auf GitHub lädst.
 - Solltest du ein Packet benötigen (Packete findest du auf [npm](www.npmjs.com)) so installiere sie mit `bun i [packet name hier]`.
 
 Hier sind noch ein paar Erklärungen:
