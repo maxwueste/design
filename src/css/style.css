@@ -1,25 +1,25 @@
 @font-face {
-  font-family: "NouvelleBold";
-  src: url("/src/fonts/NouvelleBold.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "Nouvelle";
+  src: url("../fonts/NouvelleBold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "NouvelleNormal";
-  src: url("/src/fonts/NouvelleNormal.woff2") format("woff2");
+  font-family: "Nouvelle";
+  src: url("../fonts/NouvelleNormal.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "NouvelleThinDiagonal";
-  src: url("/src/fonts/NouvelleThinDiagonal.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "Nouvelle";
+  src: url("../fonts/NouvelleThinDiagonal.woff2") format("woff2");
+  font-weight: thin;
   font-style: italic;
-  font-display: optional;
+  font-display: swap;
 }
 
 body {
@@ -44,9 +44,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "NouvelleNormal", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Nouvelle", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -258,9 +256,7 @@ ul li img {
 }
 
 p.description {
-  font-family: "NouvelleNormal", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Nouvelle", sans-serif;
   color: white;
   font-size: 26px;
   font-weight: normal;
@@ -284,9 +280,8 @@ p.description::after {
 }
 
 h2 {
-  font-family: "NouvelleBold", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Nouvelle", sans-serif;
+  font-weight: bold;
   color: var(--accent);
   font-size: 140px;
   letter-spacing: -1px;
@@ -296,9 +291,7 @@ h2 {
 }
 
 h3 {
-  font-family: "NouvelleNormal", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Nouvelle", sans-serif;
   color: white;
   font-size: 40px;
   line-height: 42px;
@@ -314,8 +307,8 @@ h3 span {
 
 #random_quotes {
   width: 80%;
-  font-family: "NouvelleThinDiagonal", sans-serif;
-  font-weight: normal;
+  font-family: "Nouvelle", sans-serif;
+  font-weight: thin;
   font-style: italic;
   margin-top: 200px;
   padding: 0;
@@ -326,9 +319,8 @@ h3 span {
 }
 
 p.number {
-  font-family: "NouvelleBold", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Nouvelle", sans-serif;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   color: var(--accent);
