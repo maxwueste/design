@@ -147,12 +147,19 @@ const texts = [
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
 
-// box_4 text animation section statement
-document.querySelectorAll(".box_4").forEach((item) => {
-  scroll(animate(item, { opacity: 1, y: [800, 0] }, { ease: "ease-out" }), {
-    target: item,
-    offset: ["start end", "end end"],
-  });
+// box_3 und box_4 text animation section statement
+document.querySelectorAll(".box_3, .box_4").forEach((item) => {
+  scroll(
+    animate(
+      item,
+      { opacity: [0, 1, 1, 0], y: [200, 0, 0, -200] },
+      { ease: "ease-in" }
+    ),
+    {
+      target: item,
+      offset: ["start end", "end end", "start start", "end start"],
+    }
+  );
 });
 
 // Animate portfolio gallery horizontally during vertical scroll
