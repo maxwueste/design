@@ -165,7 +165,7 @@ scroll(
     {
       transform: ["none", `translateX(-${items.length - 1}00vw)`],
     },
-    { ease: "linear" }
+    { ease: "inOut" }
   ),
   { target: document.querySelector("#portfolio") }
 );
@@ -214,3 +214,39 @@ const d = new Date().toLocaleDateString("de-DE", {
   month: "long",
 });
 document.getElementById("date").innerHTML = d;
+
+/*// scrolling speed
+var speed = 0;
+var lastUpdateTime = 0;
+
+// must be active (not passive)
+addEventListener(
+  "wheel",
+  function (ev) {
+    speed = ev.deltaY;
+    ev.preventDefault();
+  },
+  { passive: false }
+);
+
+// a bad usage of the gameLoop...
+function update(deltaTime) {
+  const easingFactor = 0.35;
+  speed *= easingFactor;
+}
+
+// this probably rounds the speed...
+function render() {
+  window.scrollBy(0, speed);
+}
+
+function gameLoop(currentTime) {
+  const deltaTime = currentTime - lastUpdateTime;
+  update(deltaTime);
+  render();
+  lastUpdateTime = currentTime;
+  requestAnimationFrame(gameLoop);
+}
+
+requestAnimationFrame(gameLoop);
+*/
