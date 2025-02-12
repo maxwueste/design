@@ -10,7 +10,7 @@ scroll(animate(".progress_bar", { scaleX: [0, 1] }, { ease: "linear" }), {
   target: document.querySelector("wrapper"),
 });
 
-// text animation
+// glitch text animation
 class TextScramble {
   constructor(el) {
     this.el = el;
@@ -106,15 +106,22 @@ inView("header", ({ target }) => {
   );
 });
 
-// Fade out header
-document.querySelectorAll("header").forEach((item) => {
-  scroll(animate(item, { opacity: [1, 2, 1.2, -0.1] }, { ease: "linear" }), {
-    target: item,
-    offset: ["start end", "end end", "start start", "end start"],
-  });
+// Fade out intro_text and additional_text
+document.querySelectorAll(".intro_text, .additional_text").forEach((item) => {
+  scroll(
+    animate(
+      item,
+      {
+        opacity: [1, 0],
+      },
+      { ease: "easeOut" }
+    ),
+    {
+      target: item,
+      offset: ["start start", "end start"],
+    }
+  );
 });
-
-const items = document.querySelectorAll("li");
 
 // box_1 photo animation section statement
 document.querySelectorAll("img.portrait").forEach((item) => {
@@ -136,8 +143,9 @@ document.querySelectorAll("img.portrait").forEach((item) => {
 
 // box_2 text set random quotes
 const texts = [
-  "Ich achte auf Details. Besonders in der Mikrotypografie.",
-  "Ich nutze die Vielfalt des zeitgenössischen Typedesign.",
+  "Ich achte stets auf Details. Besonders in der Mikrotypografie.",
+  "Ich nutze die Vielfalt des modernen Typedesign.",
+  "Tatsächlich gehöre ich zu denen, die gerne Fonts kaufen.",
   "Auch in der Kreation von Text und Bild liegen meine Stärken.",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
@@ -145,62 +153,21 @@ document.getElementById("random_quotes").innerText = texts[randomIndex];
 
 // box_3 und box_4 text animation section statement
 document.querySelectorAll(".box_3, .box_4").forEach((item) => {
-  scroll(
-    animate(
-      item,
-      { opacity: [0, 1, 1, 0], y: [200, 0, 0, -200] },
-      { ease: "ease-in" }
-    ),
-    {
-      target: item,
-      offset: ["start end", "end end", "start start", "end start"],
-    }
-  );
-});
-
-// Animate portfolio gallery horizontally during vertical scroll
-scroll(
-  animate(
-    "ul",
-    {
-      transform: ["none", `translateX(-${items.length - 1}00vw)`],
-    },
-    { ease: "inOut" }
-  ),
-  { target: document.querySelector("#portfolio") }
-);
-
-// Image title parallax
-const segmentLength = 1 / items.length;
-items.forEach((item, i) => {
-  const header = item.querySelectorAll(".description, .number");
-
-  scroll(animate(header, { x: [100, -150] }, { ease: "linear" }), {
-    target: document.querySelector("#portfolio"),
-    offset: [
-      [i * segmentLength, 1],
-      [(i + 1) * segmentLength, 0],
-    ],
+  scroll(animate(item, { y: [200, 0, -50, -200] }, { ease: "easeIn" }), {
+    target: item,
+    offset: ["start end", "end end", "start start", "end start"],
   });
 });
 
-// Progress bar representing portfolio gallery scroll
-scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }), {
-  target: document.querySelector("#portfolio"),
-});
-
 // Text animation
-inView("footer", ({ target }) => {
-  animate(
-    target.querySelectorAll(".name, .adress, .contact, .baseline"),
-    { opacity: [0, 1], y: [100, 0] },
-    {
-      duration: 1.5,
-      easing: [0.1, 0.2, 0.55, 0.75],
-      delay: stagger(0.4),
-    }
-  );
-});
+document
+  .querySelectorAll(".name, .adress, .contact, .baseline")
+  .forEach((item) => {
+    scroll(animate(item, { y: [150, 0] }, { ease: "linear" }), {
+      target: item,
+      offset: ["start end", "end end"],
+    });
+  });
 
 // random accent color
 document.body.style.setProperty(
