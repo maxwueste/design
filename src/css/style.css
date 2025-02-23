@@ -759,17 +759,18 @@ a.link:after {
   }
 
   header {
-    grid-template-rows: 20% 30% 50%;
+    grid-template-rows: 20% 35% 45%;
   }
 
   .intro_text {
-    align-self: center;
-    margin-top: 5%;
+    margin-top: 0%;
+    margin-bottom: 0;
+    align-self: end;
   }
 
   .additional_text {
     margin-top: 5%;
-    margin-bottom: 0;
+    margin-bottom: 0%;
     align-self: start;
   }
 
