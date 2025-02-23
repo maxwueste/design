@@ -97,11 +97,11 @@ next();
 inView("header", ({ target }) => {
   animate(
     target.querySelectorAll(".intro_text, .additional_text"),
-    { opacity: [0, 1], y: [100, 0] },
+    { opacity: [0, 1], y: [150, 0] },
     {
-      duration: 2,
+      duration: 1,
       easing: [0.1, 0.2, 0.55, 0.75],
-      delay: stagger(0.2),
+      delay: stagger(0.5),
     }
   );
 });
@@ -151,12 +151,19 @@ const texts = [
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
 
-// box_3 und box_4 text animation section statement
+// box_3 and box_4 text animation section statement
 document.querySelectorAll(".box_3, .box_4").forEach((item) => {
-  scroll(animate(item, { y: [200, 0, -50, -200] }, { ease: "easeIn" }), {
-    target: item,
-    offset: ["start end", "end end", "start start", "end start"],
-  });
+  scroll(
+    animate(
+      item,
+      { opacity: [0, 1, 1, 0.2], y: [150, 0, 0, 0] },
+      { ease: "linear" }
+    ),
+    {
+      target: item,
+      offset: ["start end", "end end", "start start", "end start"],
+    }
+  );
 });
 
 // Text animation
