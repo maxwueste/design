@@ -72,12 +72,15 @@ class TextScramble {
 
 const phrases = [
   "Prägnanz",
+  "Emotion",
+  "Klarheit",
   "Ästhetik",
   "Strategie",
-  "Charakter",
   "Methode",
   "Funktion",
   "Zweck",
+  "Format",
+  "Medium",
 ];
 
 const el = document.querySelector(".glitchtext");
@@ -143,10 +146,12 @@ document.querySelectorAll("img.portrait").forEach((item) => {
 
 // box_2 text set random quotes
 const texts = [
-  "Ich achte stets auf Details. Besonders in der Mikrotypografie.",
-  "Ich nutze die Vielfalt des modernen Typedesign.",
-  "Tatsächlich gehöre ich zu denen, die gerne Fonts kaufen.",
+  "Ich achte stets auf Details und arbeite mit Sorgfalt.",
+  "Ich liebe die Vielfalt des zeitgenössischen Typedesign!",
+  "Meine Arbeiten überzeugen mit nachhaltiger Wirkung.",
   "Auch in der Kreation von Text und Bild liegen meine Stärken.",
+  "Ich biete Lösungen an, die Verbindungen schaffen.",
+  "Du bestimmst das Budget – ich finde das passgenaue Konzept.",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
@@ -166,11 +171,62 @@ document.querySelectorAll(".box_3, .box_4").forEach((item) => {
   );
 });
 
+// circle animation
+document.querySelectorAll(".circle_white").forEach((item) => {
+  scroll(
+    animate(
+      item,
+      {
+        scale: [0, 100],
+      },
+      { ease: "cubicBezier" }
+    ),
+    {
+      target: item,
+      offset: ["start end", "end start"],
+    }
+  );
+});
+
+// Fade out circle_text
+document
+  .querySelectorAll(".circle_appetizer, .circle_heading, .circle_text")
+  .forEach((item) => {
+    scroll(
+      animate(item, {
+        opacity: [0, 1, 1, 0.2],
+        y: [150, 0, 0, 0],
+        ease: "easeOut",
+      }),
+      {
+        target: item,
+        offset: ["start end", "end end", "start start", "end start"],
+      }
+    );
+  });
+
+// Animation Box Number and Description
+document
+  .querySelectorAll(".box_portfolio_number, .box_portfolio_description")
+  .forEach((item) => {
+    scroll(
+      animate(item, {
+        opacity: [0, 1],
+        y: [150, 0],
+        ease: "linear",
+      }),
+      {
+        target: item,
+        offset: ["start end", "end end"],
+      }
+    );
+  });
+
 // Text animation
 document
   .querySelectorAll(".name, .adress, .contact, .baseline")
   .forEach((item) => {
-    scroll(animate(item, { y: [150, 0] }, { ease: "linear" }), {
+    scroll(animate(item, { y: [150, 0] }, { ease: "bicubicBezier" }), {
       target: item,
       offset: ["start end", "end end"],
     });
