@@ -850,7 +850,7 @@ a.link:after {
   }
 
   header {
-    grid-template-rows: 20% 25% 55%;
+    grid-template-rows: 20% 35% 45%;
   }
 
   .intro_text {
