@@ -801,6 +801,7 @@ a.link:after {
   }
 
   #circle_container {
+    height: 100dvh;
     min-height: fit-content;
   }
 
@@ -964,6 +965,7 @@ a.link:after {
   }
 
   #circle_container {
+    height: 100dvh;
     min-height: fit-content;
   }
 
