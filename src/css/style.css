@@ -798,6 +798,10 @@ a.link:after {
     letter-spacing: 0;
   }
 
+  #circle_container {
+    min-height: fit-content;
+  }
+
   .container_single_portfolio_img {
     grid-template-columns: 1fr;
     grid-template-rows: 50% 15% 35%;
@@ -955,6 +959,10 @@ a.link:after {
     grid-row: 3/4;
     align-items: center;
     justify-content: center;
+  }
+
+  #circle_container {
+    min-height: fit-content;
   }
 
   .container_single_portfolio_img {
