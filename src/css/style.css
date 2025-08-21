@@ -383,6 +383,7 @@ img.portrait {
   justify-content: center;
   text-align: center;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 
 .circle_heading {
@@ -412,6 +413,7 @@ img.portrait {
   justify-content: center;
   text-align: center;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 
 #portfolio {
