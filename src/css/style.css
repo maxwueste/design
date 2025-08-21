@@ -805,6 +805,11 @@ a.link:after {
     min-height: fit-content;
   }
 
+  .circle_appetizer,
+  .circle_text {
+    width: 90%;
+  }
+
   .container_single_portfolio_img {
     grid-template-columns: 1fr;
     grid-template-rows: 50% 15% 35%;
@@ -967,6 +972,11 @@ a.link:after {
   #circle_container {
     height: 100dvh;
     min-height: fit-content;
+  }
+
+  .circle_appetizer,
+  .circle_text {
+    width: 90%;
   }
 
   .container_single_portfolio_img {
