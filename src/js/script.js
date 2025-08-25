@@ -161,7 +161,7 @@ document.querySelectorAll(".box_3, .box_4").forEach((item) => {
   scroll(
     animate(
       item,
-      { opacity: [0, 1, 1, 0.2], y: [150, 0, 0, 0] },
+      { opacity: [0, 1, 1, 1], y: [150, 0, 0, 0] },
       { ease: "linear" }
     ),
     {
@@ -179,7 +179,7 @@ document.querySelectorAll(".circle_white").forEach((item) => {
       {
         scale: [0, 100],
       },
-      { ease: "cubicBezier" }
+      { ease: "linear" }
     ),
     {
       target: item,
@@ -188,15 +188,14 @@ document.querySelectorAll(".circle_white").forEach((item) => {
   );
 });
 
-// Fade out circle_text
+// Fade in circle_text
 document
   .querySelectorAll(".circle_appetizer, .circle_heading, .circle_text")
   .forEach((item) => {
     scroll(
       animate(item, {
-        opacity: [0, 1, 1, 0.2],
-        y: [150, 0, 0, 0],
-        ease: "easeOut",
+        opacity: [0, 1, 1, 1],
+        ease: "easeIn",
       }),
       {
         target: item,
