@@ -207,16 +207,18 @@ document
 
 // Animation Box Number and Description
 document
-  .querySelectorAll(".box_portfolio_number, .box_portfolio_description")
+  .querySelectorAll(
+    ".box_portfolio_img, .box_portfolio_number, .box_portfolio_description"
+  )
   .forEach((item) => {
     scroll(
       animate(item, {
-        opacity: [0, 1],
+        opacity: [0, 1, 1, 1],
         ease: "linear",
       }),
       {
         target: item,
-        offset: ["start end", "end end"],
+        offset: ["start end", "end end", "start start", "end start"],
       }
     );
   });
