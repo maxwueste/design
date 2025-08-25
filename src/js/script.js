@@ -212,7 +212,6 @@ document
     scroll(
       animate(item, {
         opacity: [0, 1],
-        y: [150, 0],
         ease: "linear",
       }),
       {
