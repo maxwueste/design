@@ -154,6 +154,10 @@ const texts = [
   "Auch in der Kreation von Text und Bild liegen meine Stärken.",
   "Ich biete Lösungen an, die Verbindungen schaffen.",
   "Du bestimmst das Budget – ich finde das passgenaue Konzept.",
+  "Typografische Prinzipien wende ich grundsätzlich an.",
+  "Ich setze oft auf einen Gestaltungsmix aus analog und digital",
+  "Konzeption, Produktion und Postproduktion – alles aus einer Hand",
+  " Ich stärke deine erfolgreiche visuelle Kommunikation",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
@@ -179,7 +183,7 @@ document.querySelectorAll(".circle_white").forEach((item) => {
     animate(
       item,
       {
-        scale: [0, 100],
+        scale: [-100, 100],
       },
       { ease: "linear" }
     ),
