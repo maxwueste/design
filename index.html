@@ -31,8 +31,9 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
 
-  <body>
-    <div id="wrapper">
+  <body body onload="myFunction()">
+    <span id="loader"></span>
+    <div id="wrapper" style="display: none">
       <div class="progress_bar"></div>
       <header>
         <div class="logo">
@@ -652,5 +653,17 @@
       </footer>
     </div>
     <script src="src/js/script.js" type="module"></script>
+    <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 1500);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("wrapper").style.display = "inline";
+      }
+    </script>
   </body>
 </html>

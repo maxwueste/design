@@ -1,3 +1,5 @@
+// loading animation
+
 import {
   animate,
   stagger,
@@ -212,25 +214,29 @@ document
   .forEach((item) => {
     scroll(
       animate(item, {
-        opacity: [0, 1, 1, 1],
+        opacity: [0, 1],
         ease: "linear",
       }),
       {
         target: item,
-        offset: ["start end", "end end", "start start", "end start"],
+        offset: ["start end", "end end"],
       }
     );
   });
 
 // Text animation
-document
-  .querySelectorAll(".name, .adress, .contact, .baseline")
-  .forEach((item) => {
-    scroll(animate(item, { y: [150, 0] }, { ease: "bicubicBezier" }), {
-      target: item,
-      offset: ["start end", "end end"],
-    });
-  });
+document;
+inView("footer", ({ target }) => {
+  animate(
+    target.querySelectorAll(".name, .adress, .contact, .baseline"),
+    { opacity: [0, 1], y: [150, 0] },
+    {
+      duration: 1,
+      easing: [0.1, 0.2, 0.55, 0.75],
+      delay: stagger(0.5),
+    }
+  );
+});
 
 // random accent color
 document.body.style.setProperty(
