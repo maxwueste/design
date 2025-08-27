@@ -149,15 +149,15 @@ document.querySelectorAll("img.portrait").forEach((item) => {
 // box_2 text set random quotes
 const texts = [
   "Ich achte stets auf Details und arbeite mit Sorgfalt.",
-  "Ich liebe die Vielfalt des zeitgenössischen Typedesign!",
+  "Ich liebe die Vielfalt des zeitgenössischen Typedesign.",
   "Meine Arbeiten überzeugen mit nachhaltiger Wirkung.",
   "Auch in der Kreation von Text und Bild liegen meine Stärken.",
   "Ich biete Lösungen an, die Verbindungen schaffen.",
   "Du bestimmst das Budget – ich finde das passgenaue Konzept.",
   "Typografische Prinzipien wende ich grundsätzlich an.",
-  "Ich setze oft auf einen Gestaltungsmix aus analog und digital",
-  "Konzeption, Produktion und Postproduktion – alles aus einer Hand",
-  " Ich stärke deine erfolgreiche visuelle Kommunikation",
+  "Ich setze oft auf einen Gestaltungsmix aus analog und digital.",
+  "Konzeption, Kreation und Postproduktion – alles aus einer Hand.",
+  " Ich aktiviere deine Kommunikation erfolgreich.",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
