@@ -661,14 +661,10 @@ footer {
 
 .baseline {
   color: #888888;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
   grid-column: 1/4;
   grid-row: 2/3;
   align-content: center;
   text-align: center;
-  gap: 20px;
 }
 
 .box_coding {
@@ -779,24 +775,10 @@ a.link:after {
   }
 
   .baseline {
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
+    color: #888888;
     grid-row: 2/3;
     grid-column: 2/3;
     align-content: start;
-  }
-
-  .box_coding {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    text-align: center;
-  }
-
-  .box_date {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 2/3;
     text-align: center;
   }
 }
@@ -919,19 +901,16 @@ a.link:after {
     grid-column: 1/2;
   }
 
-  .baseline {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 4/5;
-    grid-column: 1/2;
-  }
-
   .name,
   .adress,
   .content,
   .baseline {
     padding-top: 0px;
     align-content: center;
+  }
+  .baseline {
+    grid-row: 4/5;
+    grid-column: 1/2;
   }
 }
 
@@ -1102,26 +1081,8 @@ a.link:after {
   }
 
   .baseline {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
     align-content: center;
     grid-row: 4/5;
     grid-column: 1/2;
-  }
-
-  .box_coding {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    text-align: center;
-    align-content: end;
-  }
-
-  .box_date {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: center;
-    align-content: start;
   }
 }
