@@ -195,22 +195,21 @@ document.querySelectorAll(".circle_white").forEach((item) => {
 });
 
 // Fade in circle_text
-document
-  .querySelectorAll(".circle_appetizer, .circle_heading, .circle_text")
-  .forEach((item) => {
-    scroll(
-      animate(item, {
-        opacity: [0, 1, 1, 1],
-        ease: "easeIn",
-      }),
-      {
-        target: item,
-        offset: ["start end", "end end", "start start", "end start"],
-      }
-    );
-  });
+document.querySelectorAll(".circle_appetizer, .circle_text").forEach((item) => {
+  scroll(
+    animate(item, {
+      y: [150, 0],
+      opacity: [0, 1, 1, 1],
+      ease: "linear",
+    }),
+    {
+      target: item,
+      offset: ["start end", "end end", "start start", "end start"],
+    }
+  );
+});
 
-// Animation Box Number and Description
+// Animation Image, Box Number and Description
 document
   .querySelectorAll(
     ".box_portfolio_img, .box_portfolio_number, .box_portfolio_description"
@@ -228,19 +227,22 @@ document
     );
   });
 
-// Text animation
-document;
-inView("footer", ({ target }) => {
-  animate(
-    target.querySelectorAll(".name, .adress, .contact, .baseline"),
-    { opacity: [0, 1], y: [150, 0] },
-    {
-      duration: 1,
-      easing: [0.1, 0.2, 0.55, 0.75],
-      delay: stagger(0.5),
-    }
-  );
-});
+// Fade in footer text
+document
+  .querySelectorAll(".name, .adress, .contact, .baseline")
+  .forEach((item) => {
+    scroll(
+      animate(
+        item,
+        { opacity: [0, 1, 1, 1], y: [150, 0, 0, 0] },
+        { ease: "linear" }
+      ),
+      {
+        target: item,
+        offset: ["start end", "end end", "start start", "end start"],
+      }
+    );
+  });
 
 // random accent color
 document.body.style.setProperty(

@@ -663,22 +663,21 @@ footer {
   color: #888888;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 1fr 1fr;
   grid-column: 1/4;
   grid-row: 2/3;
   align-content: center;
   text-align: center;
+  gap: 20px;
 }
 
 .box_coding {
-  padding-right: 15px;
   grid-column: 1/2;
   grid-row: 1/2;
   text-align: end;
 }
 
 .box_date {
-  padding-left: 15px;
   grid-column: 2/3;
   grid-row: 1/2;
   text-align: start;
@@ -922,7 +921,7 @@ a.link:after {
 
   .baseline {
     grid-template-rows: 1fr;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 1fr 1fr;
     grid-row: 4/5;
     grid-column: 1/2;
   }
