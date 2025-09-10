@@ -155,9 +155,8 @@ const texts = [
   "Ich biete Lösungen an, die Verbindungen schaffen.",
   "Du bestimmst das Budget – ich finde das passgenaue Konzept.",
   "Typografische Prinzipien wende ich grundsätzlich an.",
-  "Ich setze oft auf einen Gestaltungsmix aus analog und digital.",
-  "Konzeption, Kreation und Postproduktion – alles aus einer Hand.",
-  " Ich aktiviere deine Kommunikation erfolgreich.",
+  "Ich setze auf einen Gestaltungsmix aus analog und digital.",
+  " Ich aktiviere Deine visuelle Kommunikation.",
 ];
 const randomIndex = Math.floor(Math.random() * texts.length);
 document.getElementById("random_quotes").innerText = texts[randomIndex];
