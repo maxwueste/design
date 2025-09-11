@@ -226,6 +226,23 @@ document
     );
   });
 
+// Fade in footer text
+document
+  .querySelectorAll(".name, .adress, .contact, .baseline")
+  .forEach((item) => {
+    scroll(
+      animate(
+        item,
+        { opacity: [0, 1, 1, 1], y: [150, 0, 0, 0] },
+        { ease: "linear" }
+      ),
+      {
+        target: item,
+        offset: ["start end", "end end", "start start", "end start"],
+      }
+    );
+  });
+
 // random accent color
 document.body.style.setProperty(
   "--accent",
